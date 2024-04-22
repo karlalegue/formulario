@@ -1,6 +1,6 @@
-/* estilos para el cuerpo de la pagina*/
+/* estilos para el cuerpo de la pagina */
 body {
-    background-color: #D1BB9E; /* color de fondo*/
+    background-color: #FDF0D1; /* color de fondo */
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -8,7 +8,8 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-/* estilos para el formulario*/
+
+/* estilos para el formulario */
 .formulario {
     background-image: url('imagenFondo.jpg'); /* imagen de fondo formulario */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el formulario */
@@ -22,28 +23,34 @@ body {
     text-align: center;
     width: 380px;
 }
+
 /* estilos para titulo de bienvenida */
 form h2{
     font-size: 25px;
     color: #31363F;
     margin: 0;
-   
 }
-/* estilos para palabras de registo*/
+
+/* estilos para palabras de registo */
 form p {
     font-size: 18px;
     color: #6D2932;
     margin-bottom: 35px; 
 }
-/*estilos para cada casilla del formulario */
-.input-wrapper{
+
+
+.input-wrapper {
     position: relative;
     width: 305px;
     margin-bottom: 35px;
 }
-input{
+
+
+
+/* estilos para el campo de texto de los otros campos */
+input {
     color: black;
-    padding: 20px 15px 20px 60px;
+    padding: 20px 15px 20px 15px; /* Ajusta el padding para que coincida con los otros campos */
     width: 100%;
     border-radius: 25px;
     border: 0;
@@ -51,22 +58,28 @@ input{
     outline: none;
     font-size: 15px;
 }
-/*estilos para boton*/
-.btn{
+input::placeholder{
+    font-size: 16px;
+    color: black;
+}
+
+/* estilos para boton */
+.btn {
     padding: 20px;
     background: linear-gradient(
         90deg,
         rgba(161,130,98,1) 25%,
         rgb(133, 88, 111,1)100%);
-        box-shadow: 0 0 20px rgba(192, 203, 251, 0.7);
-        color: white;
-        text-transform: uppercase;
-        font-size: 14px;
-        cursor: pointer;
+    box-shadow: 0 0 20px rgba(192, 203, 251, 0.7);
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
 }
-/*color distinto al estar encima del boton*/
-.btn:hover{
-    background: rgb(177, 148, 111);
+
+/* color distinto al estar encima del boton */
+.btn:hover {
+    background: rgb(82, 87, 93);
 }
 /*estilo para confirmacion de registro */
 .success{
@@ -100,11 +113,11 @@ input{
     }
 
 }
-/* Estilos para la tabla de datos */
+
 #tablaDatos {
     border-collapse: collapse;
     width: 100%;
-    background-color: #fff; /* Color de fondo de la tabla */
+    background-color: #fff; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -116,36 +129,80 @@ input{
 }
 
 #tablaDatos th {
-    background-color: #6D2932; /* Color de fondo del encabezado */
+    background-color: black; 
     color: white;
     cursor: pointer;
 }
 
 #tablaDatos th:hover {
-    background-color: #4D1820; /* Color de fondo al pasar el cursor sobre el encabezado */
+    background-color: black;
 }
 
 #tablaDatos td {
-    border-bottom: 1px solid #ddd; /* Borde inferior de las celdas */
+    border-bottom: 1px solid #ddd; 
 }
 
 #tablaDatos tr:last-child td {
-    border-bottom: none; /* Eliminar borde inferior en la última fila */
+    border-bottom: none; 
 }
 
-/* Estilos para flecha de ordenamiento ascendente/descendente */
+
 #tablaDatos th[data-columna]::after {
-    content: '\2195'; /* Código de flecha arriba/abajo */
+    content: '\2195'; 
     margin-left: 5px;
     opacity: 0.3;
 }
 
 #tablaDatos th[data-columna].asc::after {
-    content: '\2191'; /* Código de flecha arriba */
+    content: '\2191'; 
     opacity: 1;
 }
 
 #tablaDatos th[data-columna].desc::after {
-    content: '\2193'; /* Código de flecha abajo */
+    content: '\2193'; 
     opacity: 1;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+/* Estilos para el overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; 
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+
+.texto h1 {
+    margin: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+.tabla-bd {
+    font-family: 'Poppins', sans-serif; 
+    color: #888; 
+    text-decoration: none; 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    font-size: 14px; 
 }

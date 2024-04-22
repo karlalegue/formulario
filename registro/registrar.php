@@ -7,17 +7,21 @@ if (isset($_POST['register'])) {
         strlen($_POST['name']) >= 1 &&
         strlen($_POST['email']) >= 1 &&
         strlen($_POST['password']) >= 1 &&
-        strlen($_POST["rut"]) >= 1
+        strlen($_POST['sexo']) >= 1 &&
+        strlen($_POST['fecha_nacimiento']) >= 1
+
+
     ){
          // obtiene y limpia los valores de los campos del formulario
         $name=trim($_POST['name']);
         $email=trim($_POST['email']);
         $password=trim($_POST['password']);
-        $rut=trim($_POST['rut']);
+        $sexo=trim($_POST['sexo']);
+        $fecha_nacimiento=trim($_POST['fecha_nacimiento']);
         $fecha=date("d/m/y");
          // prepara la consulta SQL para insertar los datos en la base de datos
-        $consulta="INSERT INTO datos(nombre, email, contraseña, rut, fecha)
-            VALUES('$name', '$email', '$password', '$rut', '$fecha')";
+        $consulta="INSERT INTO datos(nombre, email, contraseña, sexo, fecha_nacimiento, fecha)
+            VALUES('$name', '$email', '$password', '$sexo', '$fecha_nacimiento','$fecha')";
         // ejecuta la consulta y verifica si fue exitosa
         $resultado= mysqli_query($conex,$consulta);
         //confirmaciones dependiendo de si se ha completado o no el registro
